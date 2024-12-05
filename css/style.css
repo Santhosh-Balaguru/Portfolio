@@ -8614,7 +8614,7 @@ h1, h2, h3, h4, h5,
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 40px;
+      bottom: 100px;
       width: 100%; }
       @media (max-width: 767.98px) {
         .owl-carousel.home-slider .owl-dots {
