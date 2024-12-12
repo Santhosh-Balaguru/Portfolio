@@ -8711,7 +8711,7 @@ h1, h2, h3, h4, h5,
   .resume-wrap .icon {
     width: 50px;
     height: 50px;
-    background: #3e64ff;
+    background: #dddddd;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -9383,8 +9383,8 @@ textarea.form-control {
   .contact-section .box .icon {
     width: 100px;
     height: 100px;
-    background: #3e64ff;
-    margin: 0 auto;
+    background: #3e64ff; 
+    margin: 0 auto; 
     margin-bottom: 10px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -9672,3 +9672,9 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    /* Altered */
+
+    .iconBackground{
+      color: #000;
+    }
