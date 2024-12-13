@@ -9678,3 +9678,7 @@ textarea.form-control {
     .iconBackground{
       color: #000;
     }
+
+    .small-font{
+      font-size: smaller;
+    }
