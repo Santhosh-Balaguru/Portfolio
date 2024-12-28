@@ -9678,3 +9678,11 @@ textarea.form-control {
     .iconBackground{
       color: #000;
     }
+
+    #progressCircle {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
