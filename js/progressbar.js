@@ -2827,6 +2827,107 @@ function removeChildren(el) {
     }
 }
 
+
+// circleBar -----------------------------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+  var bar = new ProgressBar.Circle('#progressCircle-1', {
+      color: '#aaa',
+      strokeWidth: 18,
+      trailWidth: 10,
+      easing: 'easeInOut',
+      duration: 1400,
+      text: {
+          autoStyleContainer: false
+      },
+      from: { color: '	#ff0000', width: 1 },
+      to: { color: '#2cba00', width: 4.9 },
+      step: function(state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+          circle.path.setAttribute('stroke-width', state.width);
+          var value = Math.round(circle.value() * 100);
+          circle.setText(value === 0 ? '' : value);
+      }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = '2rem';
+  bar.animate(0.9); // Progress from 0.0 to 1.0
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var bar = new ProgressBar.Circle('#progressCircle-2', {
+      color: '#aaa',
+      strokeWidth: 18,
+      trailWidth: 10,
+      easing: 'easeInOut',
+      duration: 1400,
+      text: {
+          autoStyleContainer: false
+      },
+      from: { color: '	#ff0000', width: 1 },
+      to: { color: '#2cba00', width: 4.9 },
+      step: function(state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+          circle.path.setAttribute('stroke-width', state.width);
+          var value = Math.round(circle.value() * 100);
+          circle.setText(value === 0 ? '' : value);
+      }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = '2rem';
+  bar.animate(0.7); // Progress from 0.0 to 1.0
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var bar = new ProgressBar.Circle('#progressCircle-3', {
+      color: '#aaa',
+      strokeWidth: 18,
+      trailWidth: 10,
+      easing: 'easeInOut',
+      duration: 1400,
+      text: {
+          autoStyleContainer: false
+      },
+      from: { color: '	#ff0000', width: 1 },
+      to: { color: '#2cba00', width: 4.9 },
+      step: function(state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+          circle.path.setAttribute('stroke-width', state.width);
+          var value = Math.round(circle.value() * 100);
+          circle.setText(value === 0 ? '' : value);
+      }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = '2rem';
+  bar.animate(0.9); // Progress from 0.0 to 1.0
+});
+
+
+
+
+
+// Line BAR -----------------------------------------------------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+
+var linebar = new ProgressBar.Line('#linebar-1', {
+strokeWidth: 4,
+easing: 'easeInOut',
+duration: 1400,
+color: '#FFEA82',
+trailColor: '#eee',
+trailWidth: 1,
+svgStyle: {width: '100%', height: '100%'},
+from: {color: '#FFEA82'},
+to: {color: '#ED6A5A'},
+step: (state, linebar) => {
+linebar.path.setAttribute('stroke', state.color);
+linebar.setText(Math.round(linebar.value() * 100) + ' %');
+}
+});
+
+linebar.animate(1.0);  // Number from 0.0 to 1.0
+});
+
+
 module.exports = {
     extend: merge,
     render: render,
